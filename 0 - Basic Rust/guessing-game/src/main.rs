@@ -11,7 +11,7 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1, 101);
 
     // Remove for prod please
-    println!("The secret number is: {}", secret_number);
+    // println!("The secret number is: {}", secret_number);
 
     // Loop over opotunities
     loop {
@@ -28,8 +28,14 @@ fn main() {
             .expect("Failed to read line");
     
     
-        // Transform guess into a u32 variable
-        let guess: u32 = guess.trim().parse().expect("Please type a number!");
+        // // Transform guess into a u32 variable
+        // let guess: u32 = guess.trim().parse().expect("Please type a number!");
+
+        // Create a match for error more granular error handling
+        let guess:u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue, // Ask again for a number
+        };
     
         // Show your guess
         println!("You guessed: {}", guess);
