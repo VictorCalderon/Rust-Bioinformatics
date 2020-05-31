@@ -15,6 +15,7 @@ fn main() {
 
     // Loop over opotunities
     loop {
+        
         // Ask for input
         println!("Please input your guess.");
 
