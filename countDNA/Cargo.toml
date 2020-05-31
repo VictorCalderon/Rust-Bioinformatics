@@ -1,5 +1,5 @@
 [package]
-name = "nucl-count"
+name = "count_dna"
 version = "0.1.0"
 authors = ["VictorCalderon <victorvirgilioc@gmail.com>"]
 edition = "2018"
